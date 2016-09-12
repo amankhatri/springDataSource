@@ -1,0 +1,42 @@
+package mapTest;
+
+import java.util.HashMap;
+
+class User{
+	String name;
+	int age;
+	int salary;
+	
+	public User(String name, int age, int salary) {
+		this.name = name;
+		this.age = age;
+		this.salary = salary;
+	}
+
+	@Override
+	public String toString() {
+		return "User [name=" + name + ", age=" + age + ", salary=" + salary + "]";
+	}
+	
+	
+}
+
+public class MapsExamples {
+
+	public static void main(String[] args) {
+		
+		HashMap<String,User> hm = new HashMap<>();
+		
+		hm.put("awi@gmail.com", new User("Awi",34,5121672));
+		hm.put("bwi@gmail.com", new User("Bwi",44,2167254));
+		hm.put("kwi@gmail.com", new User("Zwi",84,3421672));
+		hm.put("zwi@gmail.com", new User("Fwi",94,8167254));
+		
+		System.out.println(hm.get("awi@gmail.com"));
+		
+		
+		
+
+	}
+
+}

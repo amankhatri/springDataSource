@@ -1,0 +1,83 @@
+package threadP;
+
+class Data{
+	int data;
+	
+}
+
+class Producer extends Thread{
+	Data d;
+
+	public Producer(Data d) {
+		super();
+		this.d = d;
+	}
+	
+	public void run(){
+		while(true){
+			synchronized(Data.class)
+			{
+				if(d.data>=1)
+				{
+					try {
+						wait();
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+				}
+				d.data++;
+				notifyAll();
+				System.out.println(d.data);
+			}
+		}
+	}
+	
+	
+}
+
+class Consumer extends Thread{
+	Data d;
+
+	public Consumer(Data d) {
+		super();
+		this.d = d;
+	}
+	
+	public void run(){
+		while(true){
+			synchronized(Data.class)
+			{
+				if(d.data==0)
+				{try {
+					wait();
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}}
+				d.data--;
+				notifyAll();
+			}
+			System.out.println(d.data);
+		}
+	}
+	
+}
+
+public class NotifyCode {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		Data d = new Data();
+		
+		Thread producer = new Producer(d);
+		Thread consumer = new Consumer(d);
+		
+		producer.start();
+		consumer.start();
+		
+
+		producer.join();
+		consumer.join();
+	}
+
+}

@@ -1,0 +1,17 @@
+package beans;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+public class App {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		ApplicationContext bean = new AnnotationConfigApplicationContext(AppConfig.class);
+        Food f = (Food)bean.getBean("smallpizza");
+        f.doServeHot();
+        System.out.println(((Pizza)f).r.info);
+	}
+
+}

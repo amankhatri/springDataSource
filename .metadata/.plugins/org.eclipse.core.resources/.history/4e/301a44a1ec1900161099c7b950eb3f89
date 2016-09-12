@@ -1,0 +1,57 @@
+package threadP;
+
+class Data{
+	
+	int data;
+	
+}
+
+class Producer extends Thread{
+	Data d;
+
+	public Producer(Data d) {
+		super();
+		this.d = d;
+	}
+	
+	public void run(){
+		while(true){
+			d.data++;
+		}
+	}
+	
+	
+}
+
+class Consumer extends Thread{
+	Data d;
+
+	public Consumer(Data d) {
+		super();
+		this.d = d;
+	}
+	
+	public void run(){
+		while(true){
+			System.out.println(d.data);
+		}
+	}
+	
+}
+
+public class NotifyCode {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Data d = new Data();
+		
+		Thread producer = new Producer(d);
+		Thread consumer = new Consumer(d);
+		
+		producer.start();
+		consumer.start();
+		
+
+	}
+
+}

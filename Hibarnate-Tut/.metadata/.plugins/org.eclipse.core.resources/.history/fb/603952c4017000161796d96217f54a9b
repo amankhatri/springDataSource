@@ -1,0 +1,14 @@
+package Day2;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class AppConfig {
+	
+	@Bean
+	Employee getEmp(){
+		return new Employee("Awi",1000,"engineer");
+	}
+
+}

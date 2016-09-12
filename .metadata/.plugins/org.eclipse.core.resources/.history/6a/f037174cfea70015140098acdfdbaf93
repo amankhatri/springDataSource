@@ -1,0 +1,32 @@
+package test;
+
+public class Person {
+	int id;
+	String name;
+	int classId;
+	
+	public Person() {
+		
+	}
+
+	public Person(int id, String name) {
+		super();
+		this.id = id;
+		this.name = name;
+	}
+	
+	@Override
+	public String toString() {
+		return "Person [id=" + id + ", name=" + name + ", classId=" + classId + "]";
+	}
+
+	public void setClassId(int classId) {
+		this.classId = classId;
+	}
+
+	public void speak(){
+
+		System.out.println("I am Person");
+	}
+
+}

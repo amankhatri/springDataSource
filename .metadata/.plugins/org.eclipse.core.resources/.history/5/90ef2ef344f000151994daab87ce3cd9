@@ -1,0 +1,45 @@
+package threadP;
+
+class Person extends Thread{
+	String name;
+	static int g = 0;
+	
+	void fun(){
+		for(int i = 0; i < 1000; i++){
+			
+	           g  = g + 2;
+	           g  = g + 2;
+	           g  = g + 2;
+	           g  = g + 2;
+	           
+			}
+	}
+	
+	public void run(){
+		
+		fun();
+	}
+}
+
+public class Chap1 {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+
+		Person p1 = new Person();
+		Person p2 = new Person();
+//		p1.setName("First");
+//		p2.setName("Second");
+//		p1.setPriority(Thread.MAX_PRIORITY);
+		p1.start();
+		p2.start();
+		p1.join();
+		p2.join();
+//		p1.run();
+//		p2.run();
+		System.out.println(Person.g);
+		
+
+	}
+
+}

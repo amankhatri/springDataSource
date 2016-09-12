@@ -1,0 +1,37 @@
+package collections;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.PrintStream;
+
+class IsPrime{
+	
+	public static void checkPrime(int num){
+		if(num < 0 || num > 50){
+			System.out.println("error");
+			return;
+		}
+		for (int i = 2; i < num/2; i++){
+			if ( num%i == 0){
+				System.out.println("no");
+				return;
+			}
+		}
+		System.out.println("yes");
+	}
+}
+
+public class TestPrime {
+
+	public static void main(String[] args) throws FileNotFoundException {
+		
+		//System.setOut(new PrintStream(new FileOutputStream("home.txt")));
+	
+	    
+		for(int i = -5; i < 55; i++  ){
+			IsPrime.checkPrime(i);
+		}
+
+	}
+
+}

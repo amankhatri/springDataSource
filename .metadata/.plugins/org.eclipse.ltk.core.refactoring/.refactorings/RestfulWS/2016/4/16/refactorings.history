@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;RestServiceClient.java&apos; to &apos;RestfulWS/src/rest&apos;&#x0D;&#x0A;- Original project: &apos;RestfulWS&apos;&#x0D;&#x0A;- Destination element: &apos;RestfulWS/src/rest&apos;&#x0D;&#x0A;- Original element: &apos;RESTServiceClient.RestServiceClient.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/src&lt;rest" element1="/src&lt;RESTServiceClient{RestServiceClient.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1460567001923" units="1" version="1.0"/>
+</session>

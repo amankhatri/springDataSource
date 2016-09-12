@@ -1,0 +1,17 @@
+package node;
+
+public class linkedlist {
+	public Node head;
+	public int count;
+	
+	public linkedlist() {
+		this.head = null;
+		this.count = 0;
+	}
+	
+	public void inserHead(Node n){
+		n.Node(this.head);
+		head = n;
+	}
+
+}

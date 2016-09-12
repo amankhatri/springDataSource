@@ -1,0 +1,17 @@
+package beans;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class Pizza implements Food{
+
+	@Autowired
+	Recepie r;
+	
+	@Override
+	public void doServeHot() {
+		// TODO Auto-generated method stub
+		System.out.println("Serve Pizza HOT");
+		
+	}
+
+}

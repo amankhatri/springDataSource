@@ -1,0 +1,21 @@
+package Day1;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class AppConfig {
+	
+	@Bean(name="oldshow")
+	Shoe getBata(){
+		System.out.println("Creating Bata object");
+		return new Bata();
+	}
+	
+	@Bean(name="newshoe")
+	Shoe getNewBata(){
+		System.out.println("Creating New Bata object");
+		return new Bata();
+	}
+
+}

@@ -1,0 +1,22 @@
+package threadP;
+
+class Person extends Thread{
+	String name;
+	
+	public void run(){
+		System.out.println("In a thread");
+	}
+}
+
+public class Chap1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Person p1 = new Person();
+		Person p2 = new Person();
+		p1.start();
+		p2.start();
+	}
+
+}

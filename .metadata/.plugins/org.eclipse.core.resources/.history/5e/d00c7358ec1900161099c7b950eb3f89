@@ -1,0 +1,16 @@
+package threadP;
+
+class WaitNotify{
+	
+	
+	
+}
+
+public class NotifyCode {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

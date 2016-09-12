@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+
+<bean id="bataShoe" class="shoes.Bata" scope="prototype"  factory-method="createBataShoes">
+</bean>
+
+<bean id="newPumaShoe" class="shoes.Puma" scope="prototype">
+</bean>
+
+<bean id="bataFactory" class="shoes.BataFactory">
+</bean>
+
+<bean id="newBataShoe" class="shoes.Bata" scope="prototype" factory-bean="bataFactory" factory-method="createShoes">
+</bean>
+
+<bean id="bataShoe2" class="shoes.Bata" >
+<constructor-arg name="price" value="200"></constructor-arg>
+</bean>
+
+<bean id="shoeoutlet" class="shoes.ShoeOutlet">
+<constructor-arg name="b" ref="newBataShoe"></constructor-arg>
+<constructor-arg name="p" ref="newPumaShoe"></constructor-arg>
+</bean>
+
+</beans>

@@ -1,0 +1,18 @@
+package threadP;
+
+public class Diff {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String s1 = "Jai 10:15 11:10";
+		String s2 = "Veeru 10:10 11:00";
+		String s1arr[] = s1.split(" ");
+		String s2arr[] = s2.split(" ");
+		System.out.println(s1arr[1] + " " + s1arr[2]);
+		System.out.println(s2arr[1] + " " + s2arr[2]);
+		
+
+	}
+
+}

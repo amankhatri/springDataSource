@@ -1,0 +1,17 @@
+package Day1;
+
+public class Bata implements Shoe{
+
+	@Override
+	public void makeShoeComfortable() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void makeShoeLookGood() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

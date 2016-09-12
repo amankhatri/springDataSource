@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;beans.xml&apos; to &apos;AOPSpring/src/aop&apos;&#x0D;&#x0A;- Original project: &apos;AOPSpring&apos;&#x0D;&#x0A;- Destination element: &apos;AOPSpring/src/aop&apos;&#x0D;&#x0A;- Original element: &apos;beans.xml&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move file" destination="/src&lt;aop" element1="beans.xml" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1458798880858" units="0" version="1.0"/>
+</session>

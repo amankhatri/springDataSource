@@ -1,0 +1,22 @@
+package Day1;
+
+
+
+public class TestPerson {
+	
+	SessionFactory factory;
+	
+	public void setup(){
+		Configuration configuration = new Configuration();
+		configuration.configure();
+		ServiceRegistryBuilder srBuilder = new ServiceRegistryBuilder();
+		srBuilder.applySetting(settingName, null);
+	}
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

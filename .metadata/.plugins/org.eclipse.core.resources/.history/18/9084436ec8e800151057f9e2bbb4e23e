@@ -1,0 +1,77 @@
+package mapTest;
+
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.TreeMap;
+
+class User implements Comparable{
+	String name;
+	int age;
+	int salary;
+	
+	public User(String name, int age, int salary) {
+		this.name = name;
+		this.age = age;
+		this.salary = salary;
+	}
+
+	@Override
+	public String toString() {
+		return "User [name=" + name + ", age=" + age + ", salary=" + salary + "]";
+	}
+
+	@Override
+	public int compareTo(Object o) {
+		// TODO Auto-generated method stub
+		
+		User v = (User)o;
+		return age - v.age;
+	}
+	
+	
+}
+
+class ageSort implements Comparator{
+
+	@Override
+	public int compare(Object arg0, Object arg1) {
+		// TODO Auto-generated method stub
+		User u = (User)arg0;
+		User v = (User)arg1;
+		return u.age - v.age;
+	}
+	
+}
+
+public class MapsExamples {
+
+	public static void main(String[] args) {
+		
+		TreeMap<String,User> hm = new TreeMap<>();
+		
+		hm.put("awi@gmail.com", new User("Awi",34,5121672));
+		hm.put("bwi@gmail.com", new User("Bwi",44,2167254));
+		hm.put("kwi@gmail.com", new User("Zwi",84,3421672));
+		hm.put("zwi@gmail.com", new User("Fwi",94,8167254));
+		
+		System.out.println(hm.get("awi@gmail.com"));
+		
+	    //Collections.sort(hm, new ageSort());	
+		System.out.println(hm);
+		
+	    TreeMap<User,String> h = new TreeMap<>();
+		
+		h.put( new User("Awi",34,5121672), "awi@gmail.com");
+		h.put( new User("Bwi",44,2167254), "bwi@gmail.com");
+		h.put( new User("Zwi",84,3421672), "kwi@gmail.com");
+		h.put( new User("Fwi",94,8167254), "zwi@gmail.com");
+		
+		System.out.println(h);
+		
+		System.out.println(h.get(new User("Awi",34,5121672)));
+		
+
+	}
+
+}

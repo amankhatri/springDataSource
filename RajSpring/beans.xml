@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+	<bean  factory-bean="burgerFactory" factory-method="createBurger" id="burger" class="beans.Burger" scope="prototype" init-method="onCreate" >
+		<constructor-arg type="int"  value="100" ></constructor-arg>
+        <constructor-arg type="String"  value="abc" ></constructor-arg>
+        <constructor-arg><list><value>chicken</value><value>paneer</value></list></constructor-arg>
+        <constructor-arg><list><ref bean="address2"/><ref bean="address3"/></list></constructor-arg>
+        <property name="ingredents" value="Flour Butter Cheese"></property>
+        <property name="address" ref="address"></property>
+	</bean>
+	<bean id="address" class="beans.Address" scope="prototype">
+	    <property name="add" value="Some street" ></property>
+	</bean>
+	<bean id="address2" class="beans.Address" scope="prototype">
+	    <property name="add" value="Some street2" ></property>
+	</bean>
+	<bean id="address3" class="beans.Address" scope="prototype">
+	    <property name="add" value="Some street3" ></property>
+	</bean>
+	<bean id="burgerFactory" class="beans.BurgerFactory"></bean>
+</beans>

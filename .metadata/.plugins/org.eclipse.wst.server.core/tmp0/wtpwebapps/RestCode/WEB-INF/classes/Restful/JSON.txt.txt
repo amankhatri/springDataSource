@@ -1,0 +1,9 @@
+{
+    "blogURL": "http://awantikdas.com",
+    "twitter": "http://twitter.com/awantik",
+    "social": {
+        "facebook": "http://facebook.com/awantik",
+        "pinterest": "https://www.pinterest.com/Awantik/java-articles",
+        "rss": "http://blogs.awantikdas.com/Content"
+    }
+}

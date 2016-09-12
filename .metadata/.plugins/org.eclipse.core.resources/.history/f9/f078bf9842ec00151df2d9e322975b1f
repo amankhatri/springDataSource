@@ -1,0 +1,34 @@
+package beans;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class AppConfig {
+	
+	@Bean(name="smallpizza")
+	Food getFood(){
+		System.out.println("Creating Pizza");
+		return new Pizza();
+	}
+	
+	@Bean(name="bigpizza")
+	Food getMoreFood(){
+		System.out.println("Creating More Pizza");
+		return new Pizza();
+	}
+	
+	@Bean(name="recepie")
+	Recepie getRecepie(){
+		System.out.println("Creating Recepie");
+		return new Recepie("Chicken");
+	}
+	
+	@Bean(name="recepie")
+	Recepie getMoreRecepie(){
+		System.out.println("Creating Recepie");
+		return new Recepie("Chicken");
+	}
+	
+
+}
